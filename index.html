@@ -87,6 +87,12 @@
     th, td { padding: 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
     th { color: var(--gold); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; background: rgba(255,255,255,.055); }
     tr:last-child td { border-bottom: 0; }
+    .review-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+    .review-card { padding: 18px; border-radius: 18px; background: rgba(255,255,255,.052); border: 1px solid var(--line); }
+    .review-card .num { color: var(--gold); font-weight: 900; letter-spacing: .12em; font-size: 12px; text-transform: uppercase; }
+    .review-card h3 { font-size: 18px; margin-top: 8px; }
+    .review-card p { font-size: 14px; margin-bottom: 0; }
+    .review-note { margin-top: 18px; border-left: 3px solid var(--gold); padding-left: 16px; color: var(--muted); }
     .timeline { counter-reset: step; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
     .step { counter-increment: step; }
     .step:before { content: "0" counter(step); display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: rgba(217,182,111,.14); border: 1px solid rgba(217,182,111,.42); color: var(--gold); font-weight: 850; margin-bottom: 14px; }
@@ -95,7 +101,7 @@
     .footer { border-top: 1px solid var(--line); padding: 34px 0 50px; color: var(--muted); }
     .footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
     @media (max-width: 880px) {
-      .grid.three, .grid.two, .timeline { grid-template-columns: 1fr; }
+      .grid.three, .grid.two, .timeline, .review-grid { grid-template-columns: 1fr; }
       .navlinks { display: none; }
       h1 { letter-spacing: -.045em; }
       section { padding: 42px 0; }
@@ -108,6 +114,7 @@
       <div class="brand"><span class="mark">N</span><span>NIN · Scale Good</span></div>
       <div class="navlinks">
         <a href="#wave">Foundation wave</a>
+        <a href="#review">Review queue</a>
         <a href="#gates">Stage gates</a>
         <a href="#safety">Safety</a>
         <a href="#ninety">90 days</a>
@@ -243,6 +250,60 @@
             <p>Data cooperatives, clinical co-pilots, robotics governance, sovereign infrastructure, and real-time enforcement engines remain important, but they require stronger technical, legal, privacy, funding, and evidence foundations.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+
+    <section id="review">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">Remaining portfolio for review</div>
+          <h2>Eight initiatives remain in the Scale Good review queue.</h2>
+          <p>These projects are still part of the 13-world-project portfolio. They are not removed. They are held for readiness review because they require stronger data governance, technical validation, institutional integration, funding, legal review, safety evidence, or regulatory clarity before public pilot claims.</p>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="num">02 · Capability review</div>
+            <h3>EDENA Sentient Shield</h3>
+            <p>Real-time boundary enforcement for drift, scope creep, and ethical violations. Requires technical definition, sandbox testing, auditability, and validation before care-adjacent use.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">03 · Capability review</div>
+            <h3>Nurse Data Cooperative and Ethics Council</h3>
+            <p>Nurse- and community-governed data use. Requires legal structure, consent model, privacy review, data rights, and cross-border governance before any real data work.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">04 · Advanced infrastructure</div>
+            <h3>Florence Sovereign Mesh</h3>
+            <p>Nurse-controlled distributed compute infrastructure. Requires architecture, security model, operating capacity, node governance, capital plan, and threat modeling.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">05 · Capability review</div>
+            <h3>Judgment Vault and Knowledge Graph</h3>
+            <p>Provenance-rich capture of nursing judgment. Can begin as non-PHI knowledge capture, but needs ontology, authorship, review, licensing, and clinical-use boundaries.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">06 · Advanced infrastructure</div>
+            <h3>Compassion Engine</h3>
+            <p>Constraint architecture for preserving therapeutic presence and relational care. Needs construct definition, cultural review, evidence basis, and safeguards against false empathy claims.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">08 · Capability review</div>
+            <h3>Simulation and ICU Co-Pilot</h3>
+            <p>Simulation can proceed separately under bounded conditions. Bedside co-pilot work is high-risk and requires clinical governance, validation, legal review, and institutional approval.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">12 · Capability review</div>
+            <h3>Climate-Health Sentinel Network</h3>
+            <p>Nurse-led climate-health monitoring. Should start with public data and local review before prediction, alerting, or public-health action claims.</p>
+          </article>
+          <article class="review-card">
+            <div class="num">13 · Advanced infrastructure</div>
+            <h3>Nurse Robotics Governance Authority</h3>
+            <p>Governance standards for clinical robotics. Should remain a research and standards-mapping track until use cases, partners, regulatory intersections, and nurse oversight roles are defined.</p>
+          </article>
+        </div>
+        <p class="review-note"><strong>Review principle:</strong> these initiatives may advance after they complete independent readiness assessment, EDENA tiering, owner assignment, evidence review, and a clear implementation path. Visionary value does not substitute for operational readiness.</p>
       </div>
     </section>
 

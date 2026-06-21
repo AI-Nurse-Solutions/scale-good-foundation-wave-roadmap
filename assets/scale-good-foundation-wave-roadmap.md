@@ -102,6 +102,24 @@ Conductor and Builder Guild, also called NINE², is the proposed incubator and b
 
 **Primary safeguards:** EDENA review for every project, no clinical deployment claims without approval, and clear IP, founder-capacity, and safety boundaries.
 
+
+## Remaining portfolio for review
+
+The following eight initiatives remain part of the Scale Good 13-world-project portfolio. They are not removed from the portfolio. They are held for readiness review because they require stronger data governance, technical validation, institutional integration, funding, legal review, safety evidence, or regulatory clarity before public pilot claims.
+
+| Initiative | Review posture | Why it remains in review |
+|---|---|---|
+| EDENA Sentient Shield | Capability review | Requires technical definition, sandbox testing, auditability, validation, and clear care-adjacent boundaries before use beyond simulation. |
+| Nurse Data Cooperative and Ethics Council | Capability review | Requires legal structure, consent model, privacy review, data rights, ethics council authority, and cross-border governance before any real data work. |
+| Florence Sovereign Mesh | Advanced infrastructure review | Requires architecture, security model, operating capacity, node governance, capital plan, and threat modeling. |
+| Judgment Vault and Knowledge Graph | Capability review | Can begin as non-PHI knowledge capture, but needs ontology, authorship, review, licensing, and clinical-use boundaries. |
+| Compassion Engine | Advanced infrastructure review | Needs construct definition, cultural review, evidence basis, and safeguards against false empathy or automated-compassion claims. |
+| Simulation and ICU Co-Pilot | Capability review | Simulation should be separated from bedside co-pilot work. Bedside use requires clinical governance, validation, legal review, and institutional approval. |
+| Climate-Health Sentinel Network | Capability review | Should start with public data and local review before prediction, alerting, or public-health action claims. |
+| Nurse Robotics Governance Authority | Advanced infrastructure review | Should remain a research and standards-mapping track until use cases, partners, regulatory intersections, and nurse oversight roles are defined. |
+
+**Review principle:** these initiatives may advance after they complete independent readiness assessment, EDENA tiering, owner assignment, evidence review, and a clear implementation path. Visionary value does not substitute for operational readiness.
+
 ## Stage-gate model
 
 Each initiative moves through six gates:
