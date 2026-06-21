@@ -1,132 +1,341 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Scale Good Foundation Wave Roadmap | Nurse Intelligence Network</title>
-  <meta name="description" content="Public roadmap for the approved Scale Good Foundation Wave: five early initiatives for nurse-led AI governance, learning, safety, global leadership, and builder capacity.">
-  <meta property="og:title" content="Scale Good Foundation Wave Roadmap">
-  <meta property="og:description" content="NIN public roadmap for Nightingale Protocol, Context Bundles and Mentor Network, Philippine Bridge, CAIRLN and Guardian Commons, and NINE².">
-  <meta property="og:type" content="website">
+  <meta name="description" content="A public roadmap for the first five Scale Good foundation-wave initiatives of the Nurse Intelligence Network." />
+  <meta property="og:title" content="Scale Good Foundation Wave Roadmap" />
+  <meta property="og:description" content="Five governed initiatives to build the operating base for nurse-led AI governance, safety learning, local leadership, and venture formation." />
+  <meta property="og:type" content="website" />
   <style>
-    :root{--ink:#15211f;--muted:#5a6c66;--bg:#f7f4ec;--panel:#fffdf7;--line:#ded5c5;--green:#1b6b57;--gold:#b88431;--shadow:0 20px 60px rgba(21,33,31,.10)}
-    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,#fff7e2 0,#f7f4ec 36%,#eef4f1 100%);color:var(--ink);line-height:1.65} a{color:var(--green);font-weight:700}.wrap{max-width:1120px;margin:0 auto;padding:28px}.hero{padding:82px 28px 56px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}.hero:before{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:rgba(27,107,87,.12)}.eyebrow{letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:800;font-size:.78rem}.hero h1{font-family:Georgia,serif;font-size:clamp(2.5rem,7vw,5.7rem);line-height:.96;letter-spacing:-.04em;margin:.2em 0;color:#10201d;max-width:980px}.subtitle{font-size:clamp(1.1rem,2.1vw,1.45rem);max-width:860px;color:var(--muted)}.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.pill{border:1px solid var(--line);background:rgba(255,253,247,.72);border-radius:999px;padding:8px 13px;font-size:.92rem;color:#31423e}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 18px;background:var(--green);color:#fff;box-shadow:var(--shadow)}.btn.secondary{background:transparent;color:var(--green);border:1px solid var(--green);box-shadow:none}.notice{background:#fff8e6;border:1px solid #e7c984;border-left:6px solid var(--gold);padding:18px 20px;border-radius:16px;margin:28px 0}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:28px 0}.card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}.card .num{color:var(--gold);font-weight:900}.card h3{font-family:Georgia,serif;margin:.35em 0;font-size:1.15rem;line-height:1.2}.section{background:rgba(255,253,247,.76);border:1px solid var(--line);border-radius:26px;padding:30px;margin:26px 0;box-shadow:var(--shadow)}main{padding:20px 0 70px}h2{font-family:Georgia,serif;font-size:2.25rem;line-height:1.05;margin:1.2em 0 .4em}h3{font-size:1.35rem;margin-top:1.6em;color:#18332e}.table-wrap{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:16px;background:#fff}table{border-collapse:collapse;width:100%;min-width:720px}th,td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#eef4f1;color:#18332e;font-size:.9rem;text-transform:uppercase;letter-spacing:.04em}blockquote{font-family:Georgia,serif;font-size:1.45rem;line-height:1.35;color:#18332e;border-left:5px solid var(--green);padding:12px 0 12px 22px;margin:24px 0;background:linear-gradient(90deg,rgba(27,107,87,.08),transparent)}code{background:#eef4f1;border-radius:5px;padding:1px 5px}.initiative{border-left:6px solid var(--green)}.footer{border-top:1px solid var(--line);padding:28px;color:var(--muted);font-size:.95rem}.skip{position:absolute;left:-999px}.skip:focus{left:20px;top:20px;background:#fff;padding:10px;z-index:10}@media(max-width:900px){.grid{grid-template-columns:1fr 1fr}.hero{padding-top:56px}.section{padding:22px}}@media(max-width:560px){.grid{grid-template-columns:1fr}.wrap{padding:18px}.hero h1{letter-spacing:-.025em}.meta{display:block}.pill{display:inline-block;margin:4px 2px}.section{border-radius:18px}}
+    :root {
+      --bg: #08111f;
+      --bg2: #0e1d32;
+      --panel: rgba(255,255,255,.075);
+      --panel2: rgba(255,255,255,.045);
+      --text: #f6f2ea;
+      --muted: #c9c4b8;
+      --line: rgba(255,255,255,.16);
+      --gold: #d9b66f;
+      --aqua: #80d8cf;
+      --green: #96d28d;
+      --yellow: #f0ca6a;
+      --red: #ee8c7f;
+      --shadow: 0 22px 70px rgba(0,0,0,.33);
+      --radius: 24px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(128,216,207,.20), transparent 32rem),
+        radial-gradient(circle at 85% 10%, rgba(217,182,111,.18), transparent 28rem),
+        linear-gradient(135deg, var(--bg), #091323 42%, #111827);
+      line-height: 1.6;
+    }
+    a { color: var(--aqua); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(8,17,31,.76);
+      border-bottom: 1px solid var(--line);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 760; letter-spacing: .02em; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; border: 1px solid rgba(217,182,111,.65); display: grid; place-items: center; color: var(--gold); background: rgba(217,182,111,.08); }
+    .navlinks { display: flex; gap: 18px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
+    .hero { padding: 86px 0 56px; }
+    .kicker { color: var(--gold); text-transform: uppercase; letter-spacing: .18em; font-size: 13px; font-weight: 800; margin-bottom: 18px; }
+    h1 { font-size: clamp(46px, 7vw, 92px); line-height: .96; letter-spacing: -.065em; margin: 0 0 24px; max-width: 1000px; }
+    .lead { font-size: clamp(19px, 2.2vw, 25px); color: var(--muted); max-width: 860px; margin: 0 0 34px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border-radius: 999px; padding: 13px 18px; font-weight: 740; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .btn.primary { color: #07111f; background: linear-gradient(135deg, var(--gold), #f3dfaa); }
+    .btn.secondary { color: var(--text); background: rgba(255,255,255,.08); }
+    .note { border: 1px solid rgba(217,182,111,.34); background: rgba(217,182,111,.10); border-radius: var(--radius); padding: 22px; color: #eee4cf; max-width: 940px; }
+    section { padding: 58px 0; }
+    .section-title { display: grid; gap: 10px; margin-bottom: 28px; }
+    h2 { font-size: clamp(30px, 4vw, 50px); line-height: 1.03; letter-spacing: -.04em; margin: 0; }
+    .section-title p { margin: 0; color: var(--muted); max-width: 820px; font-size: 18px; }
+    .grid { display: grid; gap: 18px; }
+    .grid.three { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .grid.two { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+    .card.soft { background: var(--panel2); box-shadow: none; }
+    .card h3 { margin: 0 0 10px; font-size: 22px; line-height: 1.15; letter-spacing: -.02em; }
+    .card p { color: var(--muted); margin: 0 0 14px; }
+    .tagrow { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0; }
+    .tag { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--text); background: rgba(128,216,207,.11); border: 1px solid rgba(128,216,207,.30); padding: 6px 10px; border-radius: 999px; font-weight: 760; }
+    .tag.yellow { background: rgba(240,202,106,.12); border-color: rgba(240,202,106,.35); }
+    .tag.green { background: rgba(150,210,141,.12); border-color: rgba(150,210,141,.35); }
+    .tag.red { background: rgba(238,140,127,.12); border-color: rgba(238,140,127,.35); }
+    .initiative { position: relative; overflow: hidden; }
+    .initiative:before { content: attr(data-num); position: absolute; right: 22px; top: 8px; font-size: 84px; font-weight: 900; color: rgba(255,255,255,.055); line-height: 1; }
+    .initiative .role { color: var(--gold); font-weight: 800; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+    .mini { display: grid; gap: 10px; margin-top: 18px; }
+    .mini div { border-left: 2px solid rgba(217,182,111,.6); padding-left: 12px; color: var(--muted); }
+    .mini strong { color: var(--text); display: block; }
+    table { width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.045); }
+    th, td { padding: 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: var(--gold); font-size: 13px; letter-spacing: .08em; text-transform: uppercase; background: rgba(255,255,255,.055); }
+    tr:last-child td { border-bottom: 0; }
+    .timeline { counter-reset: step; display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .step { counter-increment: step; }
+    .step:before { content: "0" counter(step); display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: rgba(217,182,111,.14); border: 1px solid rgba(217,182,111,.42); color: var(--gold); font-weight: 850; margin-bottom: 14px; }
+    ul { padding-left: 20px; color: var(--muted); }
+    li { margin: 8px 0; }
+    .footer { border-top: 1px solid var(--line); padding: 34px 0 50px; color: var(--muted); }
+    .footer .wrap { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    @media (max-width: 880px) {
+      .grid.three, .grid.two, .timeline { grid-template-columns: 1fr; }
+      .navlinks { display: none; }
+      h1 { letter-spacing: -.045em; }
+      section { padding: 42px 0; }
+    }
   </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">Nurse Intelligence Network · Scale Good Portfolio</div>
-    <h1>Foundation Wave Roadmap</h1>
-    <p class="subtitle">Five approved starting initiatives to build the standards, learning, safety, local-leadership, and builder infrastructure for nurse-led AI governance.</p>
-    <div class="meta">
-      <span class="pill">Public roadmap v0.1</span>
-      <span class="pill">Published June 21, 2026</span>
-      <span class="pill">Governance before autonomy</span>
-      <span class="pill">Agents propose. Humans judge. Nurses steward.</span>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <div class="brand"><span class="mark">N</span><span>NIN · Scale Good</span></div>
+      <div class="navlinks">
+        <a href="#wave">Foundation wave</a>
+        <a href="#gates">Stage gates</a>
+        <a href="#safety">Safety</a>
+        <a href="#ninety">90 days</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="kicker">Public roadmap v0.1 · June 2026</div>
+        <h1>Scale Good Foundation Wave Roadmap</h1>
+        <p class="lead">The Nurse Intelligence Network is moving the first five Scale Good initiatives from visionary portfolio language into governed, measurable, nurse-led development.</p>
+        <div class="note">
+          <strong>Reality-first posture:</strong> this roadmap does not claim that these initiatives are clinically validated, funded, certified, legally incorporated, or ready for unsupervised patient care. It defines the first governed path toward credible pilots.
+        </div>
+        <div class="hero-actions">
+          <a class="btn primary" href="#wave">View the five initiatives</a>
+          <a class="btn secondary" href="assets/scale-good-foundation-wave-roadmap.md">Download Markdown source</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="objective">
+      <div class="wrap grid two">
+        <div class="section-title">
+          <div class="kicker">Governing objective</div>
+          <h2>Scale beneficial innovation without sacrificing humanity.</h2>
+          <p>NIN’s expansion posture is federated, locally legitimate, and centrally governed. Local nurses and communities must shape implementation. Central governance protects safety, standards, measurement, and trust.</p>
+        </div>
+        <div class="card">
+          <h3>Operating interpretation</h3>
+          <ul>
+            <li><strong>NIN</strong> is the operating organization and global professional network.</li>
+            <li><strong>Scale Good</strong> is the umbrella initiative portfolio.</li>
+            <li><strong>NAIO</strong> supports standards, certification, and governance.</li>
+            <li><strong>EDENA</strong> provides ethical classification and control logic.</li>
+            <li><strong>Florence ecosystem</strong> may enable appropriate initiatives, but is not required for every program.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">Why start here</div>
+          <h2>The full portfolio has 13 projects. The foundation wave builds the operating base first.</h2>
+          <p>These five initiatives create the minimum infrastructure for standards, learning, safety, local leadership, and nurse-led building before heavier clinical, data, robotics, or distributed infrastructure work advances.</p>
+        </div>
+        <div class="grid three">
+          <div class="card soft"><h3>Governance doctrine</h3><p>Standards and review processes before autonomy or scale.</p></div>
+          <div class="card soft"><h3>Nurse learning infrastructure</h3><p>Practical templates, mentorship, and human review.</p></div>
+          <div class="card soft"><h3>Local legitimacy</h3><p>Country discovery led with local nurses, not exported assumptions.</p></div>
+          <div class="card soft"><h3>Safety learning</h3><p>De-identified safety signals and shared learning pathways.</p></div>
+          <div class="card soft"><h3>Builder pipeline</h3><p>Nurse-led products and ventures shaped by governance from the start.</p></div>
+          <div class="card soft"><h3>Evidence discipline</h3><p>Stage gates, measurement, and stop conditions before scale.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="wave">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">Approved foundation wave</div>
+          <h2>Five initiatives for governed first development.</h2>
+          <p>Each initiative begins with a public-safe posture, an initial milestone, and safeguards against premature claims.</p>
+        </div>
+        <div class="grid two">
+          <article class="card initiative" data-num="01">
+            <div class="role">Governance foundation</div>
+            <h3>Nightingale Protocol</h3>
+            <p>The proposed standards-development and constitutional process for nurse-led AI governance.</p>
+            <div class="tagrow"><span class="tag yellow">G0 → G1</span><span class="tag yellow">EDENA Yellow</span></div>
+            <div class="mini">
+              <div><strong>Public posture</strong> Draft standards-development process, not yet a binding authority.</div>
+              <div><strong>First milestone</strong> Convene a founding standards circle and produce v0.1 for review.</div>
+              <div><strong>Safeguard</strong> No enforceable-authority claims until legal and governance status are documented.</div>
+            </div>
+          </article>
+
+          <article class="card initiative" data-num="02">
+            <div class="role">Learning and mentorship foundation</div>
+            <h3>Context Bundles and Mentor Network</h3>
+            <p>Structured, provenance-aware learning artifacts supported by peer mentorship and review.</p>
+            <div class="tagrow"><span class="tag green">G0 → G1</span><span class="tag green">Green → Yellow</span></div>
+            <div class="mini">
+              <div><strong>Public posture</strong> Non-PHI educational and professional-development artifacts.</div>
+              <div><strong>First milestone</strong> Produce initial Context Bundle templates and test with mentors.</div>
+              <div><strong>Safeguard</strong> No PHI, no unsupported clinical guidance, clear human-review boundaries.</div>
+            </div>
+          </article>
+
+          <article class="card initiative" data-num="03">
+            <div class="role">Global equity foundation</div>
+            <h3>Philippine Bridge</h3>
+            <p>The first proposed country bridge for Global South nurse participation in nurse-led AI governance.</p>
+            <div class="tagrow"><span class="tag yellow">G0 → G1</span><span class="tag yellow">EDENA Yellow</span></div>
+            <div class="mini">
+              <div><strong>Public posture</strong> Country discovery and nurse leadership-building initiative.</div>
+              <div><strong>First milestone</strong> Form a Philippine NIN Discovery Circle with local nurses and stakeholders.</div>
+              <div><strong>Safeguard</strong> Local nurses lead; no cross-border clinical or data claims without local governance.</div>
+            </div>
+          </article>
+
+          <article class="card initiative" data-num="04">
+            <div class="role">Safety learning foundation</div>
+            <h3>CAIRLN and Guardian Commons</h3>
+            <p>A proposed nurse-led AI safety signal and learning commons for near misses, workflow failures, unsafe claims, and governance gaps.</p>
+            <div class="tagrow"><span class="tag yellow">G0 → G1</span><span class="tag yellow">Yellow → Red</span></div>
+            <div class="mini">
+              <div><strong>Public posture</strong> De-identified learning and safety-signal design, not formal regulatory reporting.</div>
+              <div><strong>First milestone</strong> Draft a de-identified taxonomy and pilot a non-PHI intake-and-review workflow.</div>
+              <div><strong>Safeguard</strong> No PHI, no institutional naming without permission, legal review before formal reporting.</div>
+            </div>
+          </article>
+
+          <article class="card initiative" data-num="05">
+            <div class="role">Workforce and venture foundation</div>
+            <h3>Conductor and Builder Guild / NINE²</h3>
+            <p>A proposed incubator and builder pathway that helps nurses turn practice insight into governed products, programs, standards, or ventures.</p>
+            <div class="tagrow"><span class="tag yellow">G0 → G1</span><span class="tag yellow">EDENA Yellow</span></div>
+            <div class="mini">
+              <div><strong>Public posture</strong> Cohort-based builder and governance-readiness pathway.</div>
+              <div><strong>First milestone</strong> Design a Nurse Builder Sprint that produces governed pilot charters.</div>
+              <div><strong>Safeguard</strong> EDENA review for every project; no clinical deployment claims without approval.</div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="role">Portfolio discipline</div>
+            <h3>What advances later</h3>
+            <p>Data cooperatives, clinical co-pilots, robotics governance, sovereign infrastructure, and real-time enforcement engines remain important, but they require stronger technical, legal, privacy, funding, and evidence foundations.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="gates">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">Stage gates</div>
+          <h2>No initiative advances on publicity pressure alone.</h2>
+          <p>Each initiative must earn movement through documented outputs, governance review, and evidence.</p>
+        </div>
+        <table>
+          <thead><tr><th>Gate</th><th>Stage</th><th>Minimum output</th></tr></thead>
+          <tbody>
+            <tr><td>G0</td><td>Concept</td><td>Defined problem, beneficiaries, theory of change, and strategic sponsor.</td></tr>
+            <tr><td>G1</td><td>Discovery</td><td>Stakeholder evidence, jurisdiction scan, preliminary risks, and partner interest.</td></tr>
+            <tr><td>G2</td><td>Pilot ready</td><td>Approved charter, owner, budget, governance review, measurement plan, and pilot site.</td></tr>
+            <tr><td>G3</td><td>Pilot validated</td><td>Documented results, incidents, lessons, user feedback, and revised operating model.</td></tr>
+            <tr><td>G4</td><td>Replication ready</td><td>Implementation package, training, cost model, localization guide, and partner requirements.</td></tr>
+            <tr><td>G5</td><td>International scale</td><td>Multi-country governance, quality assurance, sustainable funding, and comparative impact reporting.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="safety">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">Safety posture</div>
+          <h2>Agents propose. Humans judge. Nurses steward.</h2>
+          <p>Scale Good uses EDENA-style risk classification to protect patients, practitioners, communities, and institutional trust.</p>
+        </div>
+        <div class="grid three">
+          <div class="card"><span class="tag green">Green</span><h3>Education and planning</h3><p>Public research, community-building, workshops, and non-sensitive planning may proceed under standard review.</p></div>
+          <div class="card"><span class="tag yellow">Yellow</span><h3>Prototypes and pilots</h3><p>Simulation, de-identified data, professional materials, and operational pilots require named human owners, monitoring, and escalation pathways.</p></div>
+          <div class="card"><span class="tag red">Red</span><h3>Clinical or high-stakes use</h3><p>PHI, patient-specific recommendations, autonomous actions, robotics, safety claims, or material care impact require explicit approval, auditability, legal review, and institutional governance.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ninety">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="kicker">First 90 days</div>
+          <h2>From approved wave to governed pilots.</h2>
+          <p>The first 90 days are for control, discovery, and pilot preparation — not premature scale.</p>
+        </div>
+        <div class="timeline">
+          <div class="card step"><h3>Days 1–30</h3><p>Confirm hierarchy, assign a portfolio steward, create a decision forum, open evidence folders, and draft charters for the five initiatives.</p></div>
+          <div class="card step"><h3>Days 31–60</h3><p>Score all 13 initiatives, complete the Philippine Bridge discovery plan, design the first Context Bundle pilot, draft the CAIRLN taxonomy, and produce Nightingale Protocol v0.1.</p></div>
+          <div class="card step"><h3>Days 61–90</h3><p>Select which initiatives are ready for G2 pilot preparation, identify owners and partners, prepare the funder narrative, and define the NIN Summit 2026 role.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="claims">
+      <div class="wrap grid two">
+        <div class="section-title">
+          <div class="kicker">Public claim boundary</div>
+          <h2>This roadmap is a commitment to governed development.</h2>
+          <p>It is not a claim that the initiatives are already operational at scale.</p>
+        </div>
+        <div class="card">
+          <h3>This roadmap does not claim any initiative is currently:</h3>
+          <ul>
+            <li>Clinically validated.</li>
+            <li>Legally incorporated as a separate entity.</li>
+            <li>Certified by a regulator.</li>
+            <li>Authorized for unsupervised patient care.</li>
+            <li>Funded or approved by a health system.</li>
+            <li>Operational across countries.</li>
+            <li>Protected by trademark or intellectual property filings.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="participate">
+      <div class="wrap">
+        <div class="card">
+          <div class="kicker">Call to participation</div>
+          <h2>NIN is seeking disciplined participants, not hype.</h2>
+          <p>Nurses, educators, governance leaders, patient-safety experts, public-health partners, and aligned institutions can help move the foundation wave from concept to governed pilots through review, local context, safety thinking, implementation realism, and nurse-led stewardship.</p>
+          <div class="hero-actions"><a class="btn primary" href="assets/scale-good-foundation-wave-roadmap.md">Read the source document</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div>Scale Good Foundation Wave Roadmap · Nurse Intelligence Network</div>
+      <div>Governance before autonomy · Clarity and values before velocity</div>
     </div>
-    <div class="cta">
-      <a class="btn" href="#roadmap">Read the roadmap</a>
-      <a class="btn secondary" href="assets/scale-good-foundation-wave-roadmap.md">Download Markdown source</a>
-    </div>
-  </div>
-</header>
-<main id="main" class="wrap">
-  <section class="notice" aria-label="public safety note"><strong>Public note:</strong> This roadmap is a planning direction. It does not assert that the initiatives are legally incorporated, funded, clinically validated, certified, or approved for deployment in patient care.</section>
-  <section class="grid" aria-label="foundation wave initiatives">
-    <article class="card"><div class="num">01</div><h3>Nightingale Protocol</h3><p>Nurse-led standards-development process for healthcare AI governance.</p></article>
-    <article class="card"><div class="num">02</div><h3>Context Bundles and Mentor Network</h3><p>Provenance-rich learning artifacts and mentor-supported practice development.</p></article>
-    <article class="card"><div class="num">03</div><h3>Philippine Bridge</h3><p>Locally led Global South expansion pathway, starting in the Philippines.</p></article>
-    <article class="card"><div class="num">04</div><h3>CAIRLN and Guardian Commons</h3><p>De-identified AI safety signal learning commons.</p></article>
-    <article class="card"><div class="num">05</div><h3>Conductor and Builder Guild / NINE²</h3><p>Governed builder pathway for nurse-led products and programs.</p></article>
-  </section>
-  <section id="roadmap" class="section">
-    <h2>Decision</h2>
-    <p>NIN has approved the following five initiatives as the first <strong>Scale Good Foundation Wave</strong>: Nightingale Protocol, Context Bundles and Mentor Network, Philippine Bridge, CAIRLN and Guardian Commons, and Conductor and Builder Guild / NINE².</p>
-    <h2>Objective</h2>
-    <p>Build the governance, learning, safety, local-leadership, and builder infrastructure NIN needs before attempting more capital-intensive, data-heavy, or clinically sensitive initiatives.</p>
-    <blockquote>Can NIN organize nurse-led innovation in a way that scales good without compromising safety, dignity, local authority, or human judgment?</blockquote>
-    <h2>Current state</h2>
-    <p>The 13 Scale Good initiatives are treated as a pre-scale portfolio. The foundation wave identifies the first five initiatives most suitable for early development because they can create practical capacity without requiring premature clinical deployment.</p>
-    <h2>Known facts</h2>
-    <ul>
-      <li>NIN is the global professional community where nurses develop AI competence, shape governance, and launch ventures.</li>
-      <li>Scale Good is the working umbrella portfolio for the 13 world projects for nurse empowerment.</li>
-      <li>NAIO is treated as the standards, credentialing, and governance authority supporting the ecosystem.</li>
-      <li>EDENA provides the ethical classification and control posture: Green, Yellow, and Red.</li>
-      <li>The foundation wave has been approved as the initial public roadmap direction.</li>
-    </ul>
-    <h2>Assumptions and unknowns</h2>
-    <h3>Assumptions</h3>
-    <ul>
-      <li>NIN is operating as the coordinating organization for planning purposes.</li>
-      <li>Scale Good is the initiative portfolio, not a separate legal entity unless later documentation establishes otherwise.</li>
-      <li>The five foundation-wave initiatives are suitable for early development, not automatically pilot-ready.</li>
-      <li>Clinical products are not authorized for unsupervised patient care.</li>
-      <li>Local nursing leadership must shape country-specific implementation.</li>
-    </ul>
-    <h3>Unknowns</h3>
-    <ul>
-      <li>Final legal structure and decision rights.</li>
-      <li>Confirmed initiative owners and budgets.</li>
-      <li>Formal partner commitments.</li>
-      <li>Country-specific regulatory requirements.</li>
-      <li>Funding pathways.</li>
-      <li>Public launch timeline for each initiative.</li>
-    </ul>
-    <h2>Recommendation</h2>
-    <ol>
-      <li>Convert each initiative into a public-safe charter.</li>
-      <li>Assign an accountable owner and governance steward.</li>
-      <li>Apply EDENA risk classification.</li>
-      <li>Identify first partners or review groups.</li>
-      <li>Define a measurable pilot or discovery cycle.</li>
-      <li>Publish only claims that are evidence-backed.</li>
-    </ol>
-    <h2>Foundation wave initiatives</h2>
-    <article class="section initiative"><h3>1. Nightingale Protocol</h3><p><strong>Purpose:</strong> Create a nurse-led standards-development process for healthcare AI governance.</p><p><strong>Public positioning:</strong> A proposed governance protocol for nurse-led stewardship of AI systems in healthcare.</p><p><strong>Stage:</strong> G0 → G1, concept to discovery. <strong>EDENA tier:</strong> Yellow. <strong>First output:</strong> Nightingale Protocol v0.1 charter and standards-development process.</p><p><strong>Why it comes first:</strong> NIN needs a governance constitution before it scales programs, tools, data systems, or country chapters.</p><p><strong>Near-term milestone:</strong> Convene a founding standards circle of nurses, ethics advisors, patient/community voices, and governance reviewers.</p></article>
-    <article class="section initiative"><h3>2. Context Bundles and Mentor Network</h3><p><strong>Purpose:</strong> Turn NIN knowledge into practical learning artifacts and mentor-supported development pathways.</p><p><strong>Public positioning:</strong> Provenance-rich learning bundles and mentorship for nurses building governed practice capacity.</p><p><strong>Stage:</strong> G0 → G1, concept to discovery. <strong>EDENA tier:</strong> Green → Yellow. <strong>First output:</strong> Standard Context Bundle template and first mentor review group.</p><p><strong>Why it comes first:</strong> It is the fastest path from community to curriculum, and it can begin safely with non-PHI educational materials.</p><p><strong>Near-term milestone:</strong> Create 5–10 non-PHI context bundle templates for review by a small mentor circle.</p></article>
-    <article class="section initiative"><h3>3. Philippine Bridge</h3><p><strong>Purpose:</strong> Build a locally led bridge for Global South nurse participation, starting in the Philippines.</p><p><strong>Public positioning:</strong> A country-discovery and leadership pathway for nurses to shape governance from where they are.</p><p><strong>Stage:</strong> G0 → G1, concept to discovery. <strong>EDENA tier:</strong> Yellow. <strong>First output:</strong> Philippine Bridge discovery charter and country opportunity scorecard.</p><p><strong>Why it comes first:</strong> It anchors global expansion in local nursing leadership rather than exporting a fixed model from headquarters.</p><p><strong>Near-term milestone:</strong> Convene a Philippine NIN Discovery Circle with local nurses, educators, institutional leaders, and community voices.</p></article>
-    <article class="section initiative"><h3>4. CAIRLN and Guardian Commons</h3><p><strong>Purpose:</strong> Create nurse-led safety learning infrastructure for AI-related incidents, near misses, and safety signals.</p><p><strong>Public positioning:</strong> A de-identified learning commons for healthcare AI safety signals, beginning with nurse-led reporting and review.</p><p><strong>Stage:</strong> G0 → G1, concept to discovery. <strong>EDENA tier:</strong> Yellow → Red. <strong>First output:</strong> De-identified safety signal taxonomy and pilot reporting workflow.</p><p><strong>Why it comes first:</strong> Good cannot scale without a way to see harm, near misses, and weak signals early.</p><p><strong>Near-term milestone:</strong> Draft a non-PHI reporting taxonomy and review process before collecting any sensitive reports.</p></article>
-    <article class="section initiative"><h3>5. Conductor and Builder Guild / NINE²</h3><p><strong>Purpose:</strong> Create the builder and venture-development pathway for nurse-led ideas to become governed products or programs.</p><p><strong>Public positioning:</strong> A governed builder guild for nurses developing safe, useful, and accountable innovations.</p><p><strong>Stage:</strong> G0 → G1, concept to discovery. <strong>EDENA tier:</strong> Yellow. <strong>First output:</strong> Minimum viable cohort design and application criteria.</p><p><strong>Why it comes first:</strong> NIN needs a disciplined pipeline for turning ideas into charters, pilots, evidence, and responsible ventures.</p><p><strong>Near-term milestone:</strong> Design a 6–8 week Nurse Builder Sprint that ends in governed pilot charters rather than premature product claims.</p></article>
-    <h2>Execution plan</h2>
-    <div class="table-wrap"><table><thead><tr><th>Phase</th><th>Timeframe</th><th>Output</th><th>Actions</th></tr></thead><tbody>
-      <tr><td>Public-safe chartering</td><td>Days 1–30</td><td>Five initiative charters</td><td>Confirm decision rights; assign owners; create templates; apply EDENA tiers; document assumptions.</td></tr>
-      <tr><td>Discovery and partner validation</td><td>Days 31–60</td><td>Discovery evidence, partner map, pilot recommendations</td><td>Form review circles; identify partners; interview stakeholders; map regulatory and privacy constraints.</td></tr>
-      <tr><td>Pilot-readiness decisions</td><td>Days 61–90</td><td>G0–G5 stage-gate decisions</td><td>Approve or defer initiatives; finalize measurement plans; prepare NIN Summit 2026 mobilization narrative.</td></tr>
-    </tbody></table></div>
-    <h2>Owners and partners</h2>
-    <p><strong>Central NIN responsibilities:</strong> portfolio strategy, brand and narrative standards, stage-gate decisions, common governance requirements, global partnerships and fundraising, impact measurement, cross-country learning, and risk oversight.</p>
-    <p><strong>Local or partner responsibilities:</strong> stakeholder mapping, local nursing-community development, cultural and linguistic localization, regulatory navigation, pilot recruitment, community representation, and country-level reporting.</p>
-    <p><strong>Likely partner categories:</strong> nursing associations, nursing schools, health systems, simulation centers, patient safety organizations, public-health agencies, patient/community representatives, privacy/legal advisors, responsible technology partners, foundations, and development funders.</p>
-    <h2>Milestones</h2>
-    <div class="table-wrap"><table><thead><tr><th>Milestone</th><th>Target window</th><th>Evidence</th></tr></thead><tbody>
-      <tr><td>Foundation wave approved</td><td>Complete</td><td>Public roadmap published</td></tr>
-      <tr><td>Five initiative charters drafted</td><td>30 days</td><td>Charter documents</td></tr>
-      <tr><td>Interim owners assigned</td><td>30 days</td><td>Owner register</td></tr>
-      <tr><td>EDENA preliminary tiering completed</td><td>30 days</td><td>Governance register</td></tr>
-      <tr><td>Philippine Discovery Circle designed</td><td>45 days</td><td>Country discovery charter</td></tr>
-      <tr><td>Context Bundle templates reviewed</td><td>60 days</td><td>Template set and mentor feedback</td></tr>
-      <tr><td>CAIRLN taxonomy drafted</td><td>60 days</td><td>Reporting taxonomy</td></tr>
-      <tr><td>NINE² cohort model drafted</td><td>60 days</td><td>Cohort design</td></tr>
-      <tr><td>Pilot-readiness decisions made</td><td>90 days</td><td>Stage-gate decision log</td></tr>
-    </tbody></table></div>
-    <h2>Success measures</h2>
-    <p>NIN should establish baselines before setting numeric performance targets. Initial measures should track readiness, not inflated impact claims.</p>
-    <ul><li>Percentage of foundation-wave initiatives with named owners.</li><li>Percentage with approved charters.</li><li>Percentage with EDENA risk classification.</li><li>Percentage with documented assumptions, risks, decisions, and dependencies.</li><li>Number of partner conversations completed.</li><li>Number of initiatives advanced from G0 to G1.</li></ul>
-    <h2>Risks and safeguards</h2>
-    <div class="table-wrap"><table><thead><tr><th>Risk</th><th>Safeguard</th></tr></thead><tbody>
-      <tr><td>Overstating readiness</td><td>Use stage-gate labels and evidence-based claims.</td></tr><tr><td>Clinical safety exposure</td><td>Keep early work educational, discovery-based, simulated, or de-identified unless approvals exist.</td></tr><tr><td>Founder overload</td><td>Build only the foundation wave first. Defer advanced infrastructure.</td></tr><tr><td>Local legitimacy failure</td><td>Require local nursing leadership for country implementation.</td></tr><tr><td>Data privacy risk</td><td>No PHI in early public or discovery workflows.</td></tr><tr><td>Brand confusion</td><td>Distinguish NIN, Scale Good, NAIO, EDENA, Florence-X, and initiative-specific roles.</td></tr>
-    </tbody></table></div>
-    <h2>Immediate next actions</h2>
-    <ol><li>Assign interim owners for the five foundation-wave initiatives.</li><li>Draft public-safe charters for each initiative.</li><li>Create a shared governance register for assumptions, risks, decisions, and dependencies.</li><li>Prepare a partner/funder brief based on this roadmap.</li><li>Define what NIN Summit 2026 must decide, recruit, fund, or launch.</li></ol>
-    <h2>Closing position</h2>
-    <p>The foundation wave is not a retreat from ambition. It is the sequence that lets ambition become governable.</p>
-    <p>NIN should scale good by building the conditions that make good durable: standards, mentorship, local leadership, safety learning, and disciplined builders.</p>
-    <blockquote>Agents propose. Humans judge. Nurses steward.</blockquote>
-  </section>
-</main>
-<footer class="footer"><div class="wrap">Nurse Intelligence Network · Scale Good Foundation Wave Roadmap · Public-safe planning artifact. Clinical, privacy, regulatory, and institutional requirements must be satisfied before care-facing use.</div></footer>
+  </footer>
 </body>
 </html>

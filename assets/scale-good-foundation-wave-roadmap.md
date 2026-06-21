@@ -1,301 +1,180 @@
 # Scale Good Foundation Wave Roadmap
 
-**Nurse Intelligence Network | Public Roadmap v0.1**
-**Published:** June 21, 2026
-**Status:** Approved foundation wave for public roadmap development
-**Source:** Robert Domondon Portfolio and NIN Global Expansion planning work
+**Nurse Intelligence Network**
+**Public roadmap v0.1**
+**Date:** June 21, 2026
 
-## Public note
+## Purpose
 
-This roadmap describes a planning direction for the Nurse Intelligence Network and the Scale Good initiative portfolio. It does not assert that the initiatives are legally incorporated, funded, clinically validated, certified, or approved for deployment in patient care. Clinical, privacy, regulatory, and institutional requirements must be satisfied before any care-facing use.
+The Nurse Intelligence Network is preparing the first public roadmap for the Scale Good initiative portfolio. This roadmap identifies the first five initiatives approved for foundation-wave development.
 
-## Decision
+The purpose is not to claim that these initiatives are fully operational, funded, clinically validated, certified, or ready for international scale. The purpose is to establish a governed path from concept to credible pilots.
 
-NIN has approved the following five initiatives as the first **Scale Good Foundation Wave**:
+## Governing objective
 
-1. Nightingale Protocol
-2. Context Bundles and Mentor Network
-3. Philippine Bridge
-4. CAIRLN and Guardian Commons
-5. Conductor and Builder Guild / NINE²
+Scale nurse-led intelligence and beneficial innovation while preserving humanity, safety, local agency, and accountable governance.
 
-## Objective
+## Operating interpretation
 
-Build the governance, learning, safety, local-leadership, and builder infrastructure NIN needs before attempting more capital-intensive, data-heavy, or clinically sensitive initiatives.
+For this roadmap:
 
-The foundation wave exists to answer one question:
+- **NIN** is treated as the operating organization and global professional network.
+- **Scale Good** is treated as NIN’s umbrella initiative portfolio.
+- **NAIO Institute** is treated as the supporting standards, certification, and governance authority.
+- **EDENA** is treated as the ethical classification and control layer.
+- **Florence-X and related Florence ecosystem components** are treated as enabling infrastructure where appropriate, not as required infrastructure for every initiative.
 
-> Can NIN organize nurse-led innovation in a way that scales good without compromising safety, dignity, local authority, or human judgment?
+These are working operating assumptions for planning. Formal legal, governance, contractual, and jurisdiction-specific relationships remain subject to documentation.
 
-## Current state
+## Why a foundation wave
 
-The 13 Scale Good initiatives are treated as a pre-scale portfolio. The foundation wave identifies the first five initiatives most suitable for early development because they can create practical capacity without requiring premature clinical deployment.
+The full Scale Good portfolio contains 13 world projects. They are not equally mature, equally fundable, or equally ready for clinical deployment.
 
-## Known facts
+The foundation wave prioritizes initiatives that can build the operating base NIN needs before advancing into heavier infrastructure, clinical decision-support, data cooperative, robotics, or international scale claims.
 
-- NIN is the global professional community where nurses develop AI competence, shape governance, and launch ventures.
-- Scale Good is the working umbrella portfolio for the 13 world projects for nurse empowerment.
-- NAIO is treated as the standards, credentialing, and governance authority supporting the ecosystem.
-- EDENA provides the ethical classification and control posture: Green, Yellow, and Red.
-- The foundation wave has been approved as the initial public roadmap direction.
+The foundation wave creates five capabilities:
 
-## Assumptions and unknowns
+1. Standards and governance doctrine.
+2. Practical nurse learning infrastructure.
+3. Local legitimacy in an initial priority geography.
+4. Safety signal collection and shared learning.
+5. A pipeline for nurse builders and governed ventures.
 
-### Assumptions
-
-- NIN is operating as the coordinating organization for planning purposes.
-- Scale Good is the initiative portfolio, not a separate legal entity unless later documentation establishes otherwise.
-- The five foundation-wave initiatives are suitable for early development, not automatically pilot-ready.
-- Clinical products are not authorized for unsupervised patient care.
-- Local nursing leadership must shape country-specific implementation.
-
-### Unknowns
-
-- Final legal structure and decision rights.
-- Confirmed initiative owners and budgets.
-- Formal partner commitments.
-- Country-specific regulatory requirements.
-- Funding pathways.
-- Public launch timeline for each initiative.
-
-## Recommendation
-
-Develop the foundation wave through a governed 90-day build sequence:
-
-1. Convert each initiative into a public-safe charter.
-2. Assign an accountable owner and governance steward.
-3. Apply EDENA risk classification.
-4. Identify first partners or review groups.
-5. Define a measurable pilot or discovery cycle.
-6. Publish only claims that are evidence-backed.
-
-## Foundation wave initiatives
+## Approved foundation wave
 
 ### 1. Nightingale Protocol
 
-**Purpose:** Create a nurse-led standards-development process for healthcare AI governance.
+**Role in the portfolio:** Governance foundation.
 
-**Public positioning:** A proposed governance protocol for nurse-led stewardship of AI systems in healthcare.
+The Nightingale Protocol is the proposed standards-development and constitutional process for nurse-led AI governance. Its early function is to define the principles, roles, review processes, and accountability structures that guide Scale Good initiatives.
 
-**Stage:** G0 → G1, concept to discovery.
-**EDENA tier:** Yellow.
-**First output:** Nightingale Protocol v0.1 charter and standards-development process.
+**Initial public posture:** Draft standards-development process. Not yet a binding legal, regulatory, or certification authority.
 
-**Why it comes first:** NIN needs a governance constitution before it scales programs, tools, data systems, or country chapters.
+**First milestone:** Convene a founding standards circle and produce Nightingale Protocol v0.1 for review.
 
-**Near-term milestone:** Convene a founding standards circle of nurses, ethics advisors, patient/community voices, and governance reviewers.
+**Primary safeguards:** No claims of enforceable authority until legal, institutional, and governance status are documented.
 
 ### 2. Context Bundles and Mentor Network
 
-**Purpose:** Turn NIN knowledge into practical learning artifacts and mentor-supported development pathways.
+**Role in the portfolio:** Practical learning and mentorship foundation.
 
-**Public positioning:** Provenance-rich learning bundles and mentorship for nurses building governed practice capacity.
+Context Bundles are structured, provenance-aware knowledge artifacts such as SBAR-style summaries, shift-learning templates, policy lookup guides, and practice-support materials. The Mentor Network helps nurses use these artifacts responsibly through peer learning and review.
 
-**Stage:** G0 → G1, concept to discovery.
-**EDENA tier:** Green → Yellow.
-**First output:** Standard Context Bundle template and first mentor review group.
+**Initial public posture:** Non-PHI educational and professional-development artifacts.
 
-**Why it comes first:** It is the fastest path from community to curriculum, and it can begin safely with non-PHI educational materials.
+**First milestone:** Produce the first set of non-PHI Context Bundle templates and test them with a small mentor review group.
 
-**Near-term milestone:** Create 5–10 non-PHI context bundle templates for review by a small mentor circle.
+**Primary safeguards:** No protected health information, no unsupported clinical guidance, and clear human-review boundaries.
 
 ### 3. Philippine Bridge
 
-**Purpose:** Build a locally led bridge for Global South nurse participation, starting in the Philippines.
+**Role in the portfolio:** Global equity and local leadership foundation.
 
-**Public positioning:** A country-discovery and leadership pathway for nurses to shape governance from where they are.
+Philippine Bridge is the first proposed country bridge for Global South nurse participation in nurse-led AI governance. The near-term goal is local discovery, leadership formation, institutional mapping, and capacity building.
 
-**Stage:** G0 → G1, concept to discovery.
-**EDENA tier:** Yellow.
-**First output:** Philippine Bridge discovery charter and country opportunity scorecard.
+**Initial public posture:** Country discovery and nurse leadership-building initiative. Not yet a clinical deployment or credentialing program.
 
-**Why it comes first:** It anchors global expansion in local nursing leadership rather than exporting a fixed model from headquarters.
+**First milestone:** Form a Philippine NIN Discovery Circle with local nurses and institutional stakeholders.
 
-**Near-term milestone:** Convene a Philippine NIN Discovery Circle with local nurses, educators, institutional leaders, and community voices.
+**Primary safeguards:** Local nursing leadership first, jurisdiction-specific review, and no cross-border clinical or data claims without local governance.
 
 ### 4. CAIRLN and Guardian Commons
 
-**Purpose:** Create nurse-led safety learning infrastructure for AI-related incidents, near misses, and safety signals.
+**Role in the portfolio:** Safety learning foundation.
 
-**Public positioning:** A de-identified learning commons for healthcare AI safety signals, beginning with nurse-led reporting and review.
+CAIRLN and Guardian Commons are proposed as a nurse-led AI safety signal and learning commons. The long-term vision is to help nurses identify, report, and learn from AI-related near misses, workflow failures, unsafe claims, and governance gaps.
 
-**Stage:** G0 → G1, concept to discovery.
-**EDENA tier:** Yellow → Red.
-**First output:** De-identified safety signal taxonomy and pilot reporting workflow.
+**Initial public posture:** De-identified learning and safety-signal design. Not yet a formal regulatory reporting system.
 
-**Why it comes first:** Good cannot scale without a way to see harm, near misses, and weak signals early.
+**First milestone:** Draft a de-identified AI safety signal taxonomy and pilot a non-PHI intake-and-review workflow.
 
-**Near-term milestone:** Draft a non-PHI reporting taxonomy and review process before collecting any sensitive reports.
+**Primary safeguards:** No protected health information, no institutional naming without permission, legal review before formal incident-reporting use, and escalation rules for imminent harm.
 
-### 5. Conductor and Builder Guild / NINE²
+### 5. Conductor and Builder Guild, or NINE²
 
-**Purpose:** Create the builder and venture-development pathway for nurse-led ideas to become governed products or programs.
+**Role in the portfolio:** Workforce and venture pipeline foundation.
 
-**Public positioning:** A governed builder guild for nurses developing safe, useful, and accountable innovations.
+Conductor and Builder Guild, also called NINE², is the proposed incubator and builder pathway for nurse-led ideas. Its purpose is to help nurses turn practice insight into governed, useful, and evidence-oriented products, programs, standards, or ventures.
 
-**Stage:** G0 → G1, concept to discovery.
-**EDENA tier:** Yellow.
-**First output:** Minimum viable cohort design and application criteria.
+**Initial public posture:** Cohort-based builder and governance-readiness pathway. Not yet a product accelerator making clinical deployment claims.
 
-**Why it comes first:** NIN needs a disciplined pipeline for turning ideas into charters, pilots, evidence, and responsible ventures.
+**First milestone:** Design a minimum viable Nurse Builder Sprint that produces governed pilot charters rather than premature launches.
 
-**Near-term milestone:** Design a 6–8 week Nurse Builder Sprint that ends in governed pilot charters rather than premature product claims.
+**Primary safeguards:** EDENA review for every project, no clinical deployment claims without approval, and clear IP, founder-capacity, and safety boundaries.
 
-## Execution plan
+## Stage-gate model
 
-### Phase 1: Public-safe chartering
+Each initiative moves through six gates:
 
-**Timeframe:** Days 1–30
-**Output:** Five initiative charters, one for each foundation-wave initiative.
+| Gate | Stage | Minimum output |
+|---|---|---|
+| G0 | Concept | Defined problem, beneficiaries, theory of change, and strategic sponsor. |
+| G1 | Discovery | Stakeholder evidence, jurisdiction scan, preliminary risks, and partner interest. |
+| G2 | Pilot ready | Approved charter, owner, budget, governance review, measurement plan, and pilot site. |
+| G3 | Pilot validated | Documented results, incidents, lessons, user feedback, and revised operating model. |
+| G4 | Replication ready | Implementation package, training, cost model, localization guide, and partner requirements. |
+| G5 | International scale | Multi-country governance, quality assurance, sustainable funding, and comparative impact reporting. |
 
-Actions:
+No initiative advances because of publicity pressure, conference timing, or founder enthusiasm alone.
 
-- Confirm decision rights.
-- Assign interim initiative owners.
-- Create charter templates.
-- Apply EDENA preliminary tiers.
-- Document assumptions and unknowns.
-- Define first safe output for each initiative.
+## Safety posture
 
-### Phase 2: Discovery and partner validation
+Scale Good uses a practical EDENA risk posture:
 
-**Timeframe:** Days 31–60
-**Output:** Discovery evidence, partner map, and pilot recommendations.
+| Tier | Meaning | Control |
+|---|---|---|
+| Green | Education, public research, community-building, and non-sensitive planning. | Standard review. |
+| Yellow | Prototypes, simulation, de-identified data, professional materials, and operational pilots. | Named human owner, documented review, data controls, monitoring, escalation pathway. |
+| Red | Patient-specific recommendations, PHI, autonomous clinical actions, high-stakes workforce decisions, robotics, safety claims, or systems that materially affect care. | Explicit human authorization, clinical governance, privacy/security/legal review, validation, auditability, and institutional approval. |
 
-Actions:
+When uncertain, NIN tiers up.
 
-- Form review circles.
-- Identify anchor institutions or local partners.
-- Interview stakeholders.
-- Map regulatory and privacy constraints.
-- Determine funding pathways.
-- Select 2–3 pilots for deeper development.
+## First 90 days
 
-### Phase 3: Pilot-readiness decisions
+### Days 1–30: establish control
 
-**Timeframe:** Days 61–90
-**Output:** Pilot-ready charters where evidence supports advancement.
+- Confirm the NIN–Scale Good hierarchy as the working operating model.
+- Assign a Scale Good portfolio steward.
+- Create a portfolio council or interim decision forum.
+- Create one evidence folder per initiative.
+- Draft charters for the five foundation-wave initiatives.
 
-Actions:
+### Days 31–60: validate priority pathways
 
-- Approve or defer each initiative using G0–G5 stage gates.
-- Finalize measurement plans.
-- Establish reporting cadence.
-- Prepare NIN Summit 2026 mobilization narrative.
-- Publish progress without overstating readiness.
+- Score all 13 initiatives using a readiness and strategic-value rubric.
+- Complete the Philippine Bridge country discovery plan.
+- Design the first Context Bundle pilot.
+- Draft the CAIRLN and Guardian Commons reporting taxonomy.
+- Draft Nightingale Protocol v0.1.
 
-## Owners and partners
+### Days 61–90: prepare governed pilots
 
-### Central NIN responsibilities
+- Select which foundation-wave initiatives are ready for G2 pilot preparation.
+- Identify owners, partners, budgets, and measurement plans.
+- Prepare public, partner, and funder narratives.
+- Define how NIN Summit 2026 supports recruitment, standards development, funding, and public accountability.
 
-- Portfolio strategy
-- Brand and narrative standards
-- Stage-gate decisions
-- Common governance requirements
-- Global partnerships and fundraising
-- Impact measurement standards
-- Cross-country learning
-- Risk oversight
+## What this roadmap does not claim
 
-### Local or partner responsibilities
+This roadmap does not claim that any initiative is currently:
 
-- Stakeholder mapping
-- Local nursing-community development
-- Cultural and linguistic localization
-- Regulatory and institutional navigation
-- Pilot recruitment and operation
-- Community and patient representation
-- Country-level impact reporting
+- Clinically validated.
+- Legally incorporated as a separate entity.
+- Certified by a regulator.
+- Authorized for unsupervised patient care.
+- Funded.
+- Approved by a health system.
+- Operational across countries.
+- Protected by trademark or intellectual property filings.
 
-### Likely partner categories
+Those claims require evidence and jurisdiction-specific review.
 
-- Nursing associations
-- Nursing schools and universities
-- Health systems and simulation centers
-- Patient safety organizations
-- Public-health agencies
-- Patient and community representatives
-- Privacy and legal advisors
-- Responsible technology partners
-- Foundations and development funders
+## Near-term call to participation
 
-## Milestones
+NIN is seeking nurses, educators, governance leaders, patient-safety experts, public-health partners, and aligned institutions who can help move the foundation wave from concept to governed pilots.
 
-| Milestone | Target window | Evidence |
-|---|---:|---|
-| Foundation wave approved | Complete | Public roadmap published |
-| Five initiative charters drafted | 30 days | Charter documents |
-| Interim owners assigned | 30 days | Owner register |
-| EDENA preliminary tiering completed | 30 days | Governance register |
-| Philippine Discovery Circle designed | 45 days | Country discovery charter |
-| Context Bundle templates reviewed | 60 days | Template set and mentor feedback |
-| CAIRLN taxonomy drafted | 60 days | Reporting taxonomy |
-| NINE² cohort model drafted | 60 days | Cohort design |
-| Pilot-readiness decisions made | 90 days | Stage-gate decision log |
+The first contribution is not hype. It is disciplined participation: review, local context, safety thinking, implementation realism, and nurse-led stewardship.
 
-## Success measures
+## Next action
 
-NIN should establish baselines before setting numeric performance targets. Initial measures should track readiness, not inflated impact claims.
-
-### Portfolio readiness
-
-- Percentage of foundation-wave initiatives with named owners.
-- Percentage with approved charters.
-- Percentage with EDENA risk classification.
-- Percentage with documented assumptions, risks, decisions, and dependencies.
-- Number of partner conversations completed.
-- Number of initiatives advanced from G0 to G1.
-
-### Governance quality
-
-- Human accountability documented.
-- Stop conditions defined.
-- Privacy and PHI boundaries documented.
-- Local/community review included where relevant.
-- Public claims reviewed before publication.
-
-### Movement-building
-
-- Nurses engaged in discovery circles.
-- Mentors recruited.
-- Local leaders identified.
-- Learning artifacts produced.
-- Safety signals or governance concerns surfaced through appropriate channels.
-
-## Risks and safeguards
-
-| Risk | Safeguard |
-|---|---|
-| Overstating readiness | Use stage-gate labels and evidence-based claims. |
-| Clinical safety exposure | Keep early work educational, discovery-based, simulated, or de-identified unless approvals exist. |
-| Founder overload | Build only the foundation wave first. Defer advanced infrastructure. |
-| Local legitimacy failure | Require local nursing leadership for country implementation. |
-| Data privacy risk | No PHI in early public or discovery workflows. |
-| Brand confusion | Distinguish NIN, Scale Good, NAIO, EDENA, Florence-X, and initiative-specific roles. |
-| Partner ambiguity | Document decision rights, communications rights, funding roles, data access, and exit terms. |
-
-## Dependencies
-
-- Confirm NIN legal and governance status.
-- Confirm Scale Good naming and ownership.
-- Assign portfolio steward.
-- Create initiative evidence folders.
-- Establish EDENA review workflow.
-- Recruit initiative review circles.
-- Determine NIN Summit 2026 role in recruitment, funding, standards development, and public launch.
-
-## Immediate next actions
-
-1. Assign interim owners for the five foundation-wave initiatives.
-2. Draft public-safe charters for each initiative.
-3. Create a shared governance register for assumptions, risks, decisions, and dependencies.
-4. Prepare a partner/funder brief based on this roadmap.
-5. Define what NIN Summit 2026 must decide, recruit, fund, or launch.
-
-## Closing position
-
-The foundation wave is not a retreat from ambition. It is the sequence that lets ambition become governable.
-
-NIN should scale good by building the conditions that make good durable: standards, mentorship, local leadership, safety learning, and disciplined builders.
-
-**Agents propose. Humans judge. Nurses steward.**
+Form the first working groups for the five foundation-wave initiatives and complete a charter for each before public pilot claims are made.
