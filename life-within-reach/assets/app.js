@@ -139,9 +139,8 @@
       why: "Losing coverage and paying list price are the two things that most often bankrupt families. I'm asking about costs and paperwork — not symptoms or diagnoses.",
       html: function (p) {
         var b = p.benefits || [];
-        var insured = has(b, "medicaid") || has(b, "marketplace") || has(b, "employer") || has(b, "medicare");
         return '<div class="choices">' +
-          (insured ? "" : yes("uninsured", "Someone in the household has no health insurance", p.uninsured)) +
+          yes("uninsured", "Someone in the household has no health insurance", p.uninsured, "Even if others in the household are covered") +
           (has(b, "medicaid") ? yes("renewalDue", "A Medicaid/CHIP renewal is due", p.renewalDue) : "") +
           yes("rxTrouble", "Cost makes it hard to take a prescription as prescribed", p.rxTrouble) +
           yes("paDenied", "Insurance denied a prior authorization", p.paDenied) + "</div>" +
@@ -212,7 +211,7 @@
   function focusQ() { var h = $("#qTitle"); if (h) h.focus({ preventScroll: false }); }
   function next() {
     if (intakeStep < STEPS.length - 1) { intakeStep++; renderIntake(); focusQ(); window.scrollTo(0, 0); return; }
-    state.profile = JSON.parse(JSON.stringify(state.draft)); save(); intakeStep = 0; refresh(); setTab("home"); window.scrollTo(0, 0);
+    state.profile = JSON.parse(JSON.stringify(state.draft)); state.profile.intakeDate = new Date().toISOString(); save(); intakeStep = 0; refresh(); setTab("home"); window.scrollTo(0, 0);
   }
 
   function loadSample() {
@@ -222,14 +221,17 @@
       energyBill: 210, shutoff: true, medEquip: true, shutoffDays: 5, uninsured: false, renewalDue: true, renewalDays: 12, rxTrouble: true, paDenied: true, medBill: 2400, rxMonthly: 42,
       childcareCost: 1900, employerDCAP: "unsure", caringAdult: true, needLeave: true, foodRunsOut: true, internetBill: 75, sample: true
     };
-    state.profile = JSON.parse(JSON.stringify(state.draft)); state.done = {}; save(); refresh(); setTab("home");
+    state.profile = JSON.parse(JSON.stringify(state.draft)); state.profile.intakeDate = new Date().toISOString(); state.done = {}; save(); refresh(); setTab("home");
     toast("Loaded a sample household — replace it with your own any time.");
   }
 
   /* ============================================================
      DIAGNOSE + PLAN
      ============================================================ */
-  function refresh() { plan = state.profile ? R.buildPlan(state.profile, new Date()) : null; renderTabs(); }
+  function refresh() {
+    if (state.profile && !state.profile.intakeDate) { state.profile.intakeDate = state.updated || new Date().toISOString(); save(); }
+    plan = state.profile ? R.buildPlan(state.profile, new Date()) : null; renderTabs();
+  }
 
   var STATUS = { "at-risk": ["rose", "At risk"], eligible: ["gold", "Eligible, not enrolled"], stretched: ["", "Stable but stretched"], stable: ["green", "Stable"] };
 
@@ -253,9 +255,11 @@
     return esc(t.valueLabel || "") + "<small>&nbsp;</small>";
   }
   function dueHtml(t) {
-    var d = t.dueDays;
-    var txt = "Due " + fmtDate(t.dueDate) + " · " + (d <= 1 ? "today/tomorrow" : "in " + d + " days");
-    return '<span class="' + (t.urgent ? "urgent" : "") + '">' + (t.urgent ? "⚑ " : "") + txt + "</span>";
+    var d = t.daysLeft;
+    var txt = d < 0 ? "Overdue since " + fmtDate(t.dueDate) + " — call today and ask what you can still do" :
+      "Due " + fmtDate(t.dueDate) + " · " + (d === 0 ? "today" : d === 1 ? "tomorrow" : "in " + d + " days");
+    var hot = t.urgent || d < 0;
+    return '<span class="' + (hot ? "urgent" : "") + '">' + (hot ? "⚑ " : "") + txt + "</span>";
   }
   function taskHtml(t) {
     var P = R.PILLARS[t.pillar];
@@ -510,7 +514,15 @@
   }
 
   /* ---------- Data controls ---------- */
-  function editAnswers(step) { state.draft = JSON.parse(JSON.stringify(state.profile || state.draft || {})); delete state.draft.sample; state.profile = null; intakeStep = typeof step === "number" ? step : 0; save(); plan = null; setTab("home"); focusQ(); }
+  function editAnswers(step) {
+    state.draft = JSON.parse(JSON.stringify(state.profile || state.draft || {})); delete state.draft.sample;
+    if (state.draft.intakeDate) {
+      var elapsed = Math.max(0, Math.floor((Date.now() - new Date(state.draft.intakeDate)) / 86400000));
+      ["renewalDays", "shutoffDays"].forEach(function (k) { if (num(state.draft[k])) state.draft[k] = Math.max(0, num(state.draft[k]) - elapsed); });
+      delete state.draft.intakeDate;
+    }
+    state.profile = null; intakeStep = typeof step === "number" ? step : 0; save(); plan = null; setTab("home"); focusQ();
+  }
   function startOver() { state = fresh(); save(); plan = null; intakeStep = 0; setTab("home"); }
   function wipe() {
     if (!confirm("Erase all your answers and progress from this browser? This can't be undone.")) return;

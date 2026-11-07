@@ -133,6 +133,7 @@
 
   function addDays(d, n) { var x = new Date(d.getTime()); x.setDate(x.getDate() + n); return x; }
   function daysBetween(a, b) { return Math.round((b - a) / 86400000); }
+  function startOfDay(d) { var x = new Date(d.getTime()); x.setHours(0, 0, 0, 0); return x; }
 
   function acaWindow(today) {
     var y = today.getFullYear(), m = today.getMonth() + 1, d = today.getDate();
@@ -209,7 +210,14 @@
     coverage: function (p, t) {
       var w = acaWindow(new Date());
       return "GETTING COVERED\n\n" + w.label + ".\n\n" +
-        (t.meta && t.meta.route === "medicaid" ?
+        (t.meta && t.meta.route === "gap" ?
+          "Based on your state and income, a subsidized plan or Medicaid may not be available to you right now.\n" +
+          "You can still get care at lower cost:\n" +
+          "• Community health centers (findahealthcenter.hrsa.gov) charge on a sliding scale by income — call and ask for a new-patient visit.\n" +
+          "• Ask any nonprofit hospital for its financial assistance policy BEFORE a planned visit.\n" +
+          "• Children and pregnant people often qualify for Medicaid/CHIP at higher incomes — apply for them separately.\n" +
+          "• Recheck if your income, household, or state changes — eligibility can change mid-year.\n" :
+        t.meta && t.meta.route === "medicaid" ?
           "Based on your income, Medicaid looks likely. You can apply ANY time of year — there's no enrollment window.\nApply through your state Medicaid agency or HealthCare.gov (it will route you).\n" :
           "Based on your income (about " + t.meta.pct + "% of the poverty line), you may get a premium tax credit.\n" +
           "Rough ceiling for a benchmark silver plan: about " + money(t.meta.maxPremium) + "/mo for your household.\n" +
@@ -457,7 +465,7 @@
         var maxPrem = income * ACA.maxContributionPct / 100;
         tasks.push(task({ id: "coverage", pillar: "health", draft: "coverage", title: w.open ? "Enroll in a Marketplace plan during Open Enrollment" : "Check for a Special Enrollment Period",
           why: "At about " + pct + "% of poverty you can get a premium tax credit. " + w.label + ".",
-          confidence: "likely", valueLabel: "Subsidized coverage", effortMin: 60, dueDays: Math.max(1, daysBetween(now, w.due)), urgent: w.open && daysBetween(now, w.due) <= 45,
+          confidence: "likely", valueLabel: "Subsidized coverage", effortMin: 60, dueDays: w.open ? Math.max(1, daysBetween(now, w.due)) : 60, absDue: w.open ? w.due : null, urgent: w.open && daysBetween(now, w.due) <= 45,
           links: [L.healthcare, L.hrsa], meta: { route: "aca", pct: pct, maxPremium: maxPrem }, source: ACA.source }));
       } else {
         tasks.push(task({ id: "coverage", pillar: "health", draft: "coverage", title: "Find low-cost care while you sort out coverage",
@@ -597,11 +605,17 @@
     });
 
     /* ----- Rank: urgent first, then dollars per hour of effort ----- */
+    // Due dates are anchored to the day of intake (countdowns like "shutoff in 5 days"
+    // were true on that day), so returning later shows the real time left — or overdue.
+    var anchor = startOfDay(p.intakeDate ? new Date(p.intakeDate) : now);
+    var today0 = startOfDay(now);
     tasks.forEach(function (t) {
-      t.dueDate = addDays(now, t.dueDays);
+      t.dueDate = t.absDue ? startOfDay(t.absDue) : addDays(anchor, t.dueDays);
+      t.daysLeft = daysBetween(today0, t.dueDate);
+      t.overdue = t.daysLeft < 0;
       var value = t.monthly + t.oneTime / 12;
-      t.score = (t.urgent ? 100000 - t.dueDays * 500 + (t.escalate ? 400 : 0) : 0) + (value / (t.effortMin / 60)) + (t.valueLabel && !value ? 40 : 0) - (t.organizer ? 30 : 0);
-      t.horizon = t.dueDays <= 30 ? 30 : t.dueDays <= 60 ? 60 : 90;
+      t.score = (t.urgent ? 100000 - t.daysLeft * 500 + (t.escalate ? 400 : 0) : 0) + (t.overdue ? 5000 : 0) + (value / (t.effortMin / 60)) + (t.valueLabel && !value ? 40 : 0) - (t.organizer ? 30 : 0);
+      t.horizon = t.daysLeft <= 30 ? 30 : t.daysLeft <= 60 ? 60 : 90;
     });
     tasks.sort(function (a, c) { return c.score - a.score; });
 
