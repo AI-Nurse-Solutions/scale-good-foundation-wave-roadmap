@@ -12,6 +12,7 @@ https://ai-nurse-solutions.github.io/scale-good-foundation-wave-roadmap/
 
 - `index.html` — public roadmap page
 - `assets/scale-good-foundation-wave-roadmap.md` — Markdown source document
+- `life-within-reach/` — **Life Within Reach**, the Nurse AI OS affordability app (landing page and browser app) for nurse-ai-os.org/life-within-reach/. See its README for deployment.
 - `.nojekyll` — disables Jekyll processing
 
 ## Public claim boundary
