@@ -184,7 +184,7 @@
     },
     foodweek: function (p) {
       var n = Math.max(1, p.hhSize | 0);
-      return "TWO-WEEK FOOD PLAN — HOUSEHOLD OF " + n + "\n(A nurse's lens: protein at every meal, watch the sodium, fiber to stay full.)\n\n" +
+      return "TWO-WEEK FOOD PLAN — HOUSEHOLD OF " + n + "\n(Built for health: protein at every meal, watch the sodium, fiber to stay full.)\n\n" +
         "PANTRY DAY: pick one food bank or pantry and put it on your calendar every week.\n\n" +
         "BUY ONCE, COOK TWICE\n" +
         "• Dry beans or lentils (cheapest protein per serving; rinse canned beans to cut sodium ~40%)\n" +
@@ -296,7 +296,7 @@
         "Please note on my account that I'm applying for LIHEAP and your low-income discount.\"\n\n" +
         "ASK: \"Are there any winter or heat-wave shutoff protections in effect?\" (Many states have them.)\n" +
         "Write down: name, date, confirmation #, new due date.\n\n" +
-        (p.medEquip ? "NURSE NOTE: most utilities accept a form signed by a physician, NP, or PA. Call the prescriber's office today and say it's to prevent a shutoff." : "");
+        (p.medEquip ? "TIP: most utilities accept a form signed by a physician, NP, or PA. Call the prescriber's office today and say it's to prevent a shutoff." : "");
     },
     liheap: function (p) {
       return "LIHEAP — ENERGY ASSISTANCE\n\nCall 211 or your local Community Action Agency: \"I'd like to apply for LIHEAP energy assistance. I have a" + (p.shutoff ? " shutoff notice — is crisis assistance available?" : "n energy bill I can't keep up with.") + "\"\n\n" +
@@ -348,7 +348,7 @@
         "Please let me know whether this qualifies under the Family and Medical Leave Act" + (st ? " and " + st : "") + ", and send me any certification forms you need. I will return the completed certification within 15 days.\n\nThank you." + SIG +
         "\n\n— FMLA: job-protected, unpaid, up to 12 weeks if your employer has 50+ employees nearby and you've worked 1,250 hours in the past year.\n" +
         (st ? "— " + st + " can replace part of your wages; you usually apply to the STATE, not your employer.\n" : "— Your state doesn't have a statewide paid leave program as of this review; ask about employer short-term disability or paid time off.\n") +
-        "— NURSE TIP for the certification form: ask the clinician to describe how often care is needed, for how long, and why — vague forms get rejected.";
+        "— TIP for the certification form: ask the clinician to describe how often care is needed, for how long, and why — vague forms get rejected.";
     },
     caregiverPay: function (p) {
       return "GET PAID FOR CARE YOU ALREADY GIVE — CALL SCRIPT\n\nCall your Area Agency on Aging (Eldercare Locator: 1-800-677-1116) or your state Medicaid office:\n" +
@@ -358,7 +358,7 @@
         "Write down every agency name, person, and date — these programs often take several calls.";
     },
     respite: function (p) {
-      return "CAREGIVER CHECK-IN — FOR YOU\n\nCaregiving is nursing work done unpaid at home. Your health counts too.\n\nThis week:\n[ ] One 2-hour break covered by someone else (family, friend, respite program)\n" +
+      return "CAREGIVER CHECK-IN — FOR YOU\n\nCaregiving is skilled work, done unpaid at home. Your health counts too.\n\nThis week:\n[ ] One 2-hour break covered by someone else (family, friend, respite program)\n" +
         "[ ] Write the medication list in one place and share it with a backup person\n[ ] Find one caregiver support group (in person or online)\n[ ] Book your own overdue check-up\n\n" +
         "If you feel hopeless or think about harming yourself: call or text 988, any time.";
     }
@@ -442,7 +442,7 @@
     if (p.foodRunsOut) {
       tasks.push(task({ id: "foodweek", pillar: "food", draft: "foodweek", title: "Build a two-week menu around a weekly pantry pickup",
         why: "You said food runs out before the month does. A pantry day plus a protein-first menu stretches every dollar.",
-        confidence: "likely", monthly: 60, effortMin: 30, dueDays: 5, links: [L.foodbank, L.l211], source: "Nurse-organizer guidance; local pantry hours vary — confirm before you go" }));
+        confidence: "likely", monthly: 60, effortMin: 30, dueDays: 5, links: [L.foodbank, L.l211], source: "Community organizer guidance; local pantry hours vary — confirm before you go" }));
     }
 
     /* ----- II. Health ----- */
@@ -587,10 +587,10 @@
         links: [L.eldercare], source: "Medicaid HCBS / self-directed services (state-specific)" }));
       tasks.push(task({ id: "respite", pillar: "family", draft: "respite", title: "Schedule one break for yourself this week",
         why: "Caregiver strain is a health risk. Respite is care for the caregiver.", confidence: "likely", valueLabel: "Your health", effortMin: 20, dueDays: 7,
-        links: [L.respite, L.lifeline988], source: "Nurse-organizer guidance" }));
+        links: [L.respite, L.lifeline988], source: "Community organizer guidance" }));
     }
 
-    /* ----- Diagnosis per pillar ----- */
+    /* ----- Situation summary per pillar ----- */
     var dx = {};
     Object.keys(PILLARS).forEach(function (k) {
       var ts = tasks.filter(function (t) { return t.pillar === k; });

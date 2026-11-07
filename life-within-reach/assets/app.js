@@ -1,6 +1,6 @@
 /* ============================================================
    Life Within Reach — Household Command Center (browser app)
-   ADPIE loop: Assess → Diagnose → Plan → Implement → Evaluate
+   Five-step loop: Assess → Understand → Plan → Act → Check in
    All data stays in localStorage on this device.
    ============================================================ */
 (function () {
@@ -179,8 +179,8 @@
     var pct = Math.round((intakeStep) / STEPS.length * 100);
     view.innerHTML =
       '<div class="intake">' +
-      '<div class="persona"><div class="persona-avatar"><img src="../assets/favicon-lamp.svg" alt=""></div><div class="bubble"><div class="who">Your nurse-organizer</div>' +
-      (intakeStep === 0 ? "<p>Hi — I'm here to sit with you, look at your actual situation, and build a plan you can start today. Plain questions, one at a time, about 5–8 minutes. Skip anything you'd rather not answer.</p>" :
+      '<div class="persona"><div class="persona-avatar" aria-hidden="true">🤝</div><div class="bubble"><div class="who">Your community organizer · AI</div>' +
+      (intakeStep === 0 ? "<p>Hi — I'm an AI community organizer, not a nurse, doctor, or lawyer. I'll look at your actual situation with you and build a plan you can start today. Plain questions, one at a time, about 5–8 minutes. Skip anything you'd rather not answer.</p>" :
         "<p>" + ["Thank you.", "Got it.", "That helps.", "Okay.", "Good to know.", "Thanks — almost there."][intakeStep % 6] + "</p>") +
       "</div></div>" +
       '<div class="progress" role="progressbar" aria-label="Intake progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + Math.max(4, pct) + '%"></span></div>' +
@@ -226,7 +226,7 @@
   }
 
   /* ============================================================
-     DIAGNOSE + PLAN
+     UNDERSTAND + PLAN
      ============================================================ */
   function refresh() {
     if (state.profile && !state.profile.intakeDate) { state.profile.intakeDate = state.updated || new Date().toISOString(); save(); }
@@ -307,7 +307,7 @@
       (due ? '<p class="small">Two questions, one minute. ' + (last ? "Last check-in " + daysSince + " days ago." : "Your first one is due in a week — or do it now.") + '</p><button class="btn btn-gold btn-small" type="button" id="checkinBtn">Check in</button>' :
         '<p class="small">Last check-in ' + (daysSince === 0 ? "today" : daysSince + " day" + (daysSince > 1 ? "s" : "") + " ago") + '. Next one in ' + (7 - daysSince) + ' days.</p><button class="btn-link small" type="button" id="checkinBtn">Check in early</button>') +
       "</div>" +
-      '<div class="card side-card"><h3>Need a person?</h3><ul><li><a href="https://www.211.org" target="_blank" rel="noopener">Call 211</a> — local help, 24/7</li><li><a href="https://www.lawhelp.org" target="_blank" rel="noopener">Free legal aid</a></li><li>Nurse-organizer volunteers — <span class="muted">joining in the pilot</span></li></ul></div>' +
+      '<div class="card side-card"><h3>Need a person?</h3><ul><li><a href="https://www.211.org" target="_blank" rel="noopener">Call 211</a> — local help, 24/7</li><li><a href="https://www.lawhelp.org" target="_blank" rel="noopener">Free legal aid</a></li><li>Trained community volunteers — <span class="muted">joining in the pilot</span></li></ul></div>' +
       '<div class="card side-card"><h3>Your data</h3><p class="small muted">Stored only in this browser. Export it, change it, or erase it.</p><div class="data-actions">' +
       '<button class="btn btn-ghost btn-small" type="button" id="editBtn">Edit answers</button><button class="btn btn-ghost btn-small" type="button" id="printBtn">Print plan</button>' +
       '<button class="btn btn-ghost btn-small" type="button" id="exportBtn">Export</button><button class="btn btn-ghost btn-small" type="button" id="storyBtn">Share my story</button>' +
@@ -321,9 +321,9 @@
     var p = state.profile;
     view.innerHTML = '<div class="layout"><div>' +
       (p.sample ? '<div class="boundary" style="margin-bottom:1rem"><p><strong>You\'re viewing a sample household.</strong> <button class="btn-link" type="button" id="startOwn">Start my own plan</button></p></div>' : "") +
-      '<div class="persona"><div class="persona-avatar"><img src="../assets/favicon-lamp.svg" alt=""></div><div class="bubble"><div class="who">Here\'s what\'s going on</div><p>' + summarySentence(p) + "</p>" +
+      '<div class="persona"><div class="persona-avatar" aria-hidden="true">🤝</div><div class="bubble"><div class="who">Here\'s what\'s going on</div><p>' + summarySentence(p) + "</p>" +
       '<p class="small muted">Ranked by deadline first, then by dollars saved per hour of your effort.</p></div></div>' +
-      '<div class="dx-grid" aria-label="Diagnosis by area">' + Object.keys(R.PILLARS).map(function (k) {
+      '<div class="dx-grid" aria-label="Summary by area">' + Object.keys(R.PILLARS).map(function (k) {
         var P = R.PILLARS[k], d = plan.dx[k], s = STATUS[d.status];
         return '<button type="button" class="dx" style="--accent:' + P.accent + ';text-align:left;font:inherit;cursor:pointer" data-tab="' + k + '"><div class="name">' + P.app + '</div><div class="status"><span class="chip ' + s[0] + '">' + s[1] + "</span></div><p>" + esc(d.words) + "</p></button>";
       }).join("") + "</div>" +
@@ -333,11 +333,11 @@
   }
 
   var PILLAR_INFO = {
-    food: { who: "Households whose food or internet bill is the first thing to break each month; SNAP/WIC-eligible families not enrolled; anyone whose SNAP was cut.", job: "Treat food security as a vital sign: assess intake, diagnose the shortfall, plan a food budget that survives the month, connect to the local food system.",
-      tools: [["Benefits screener", "SNAP, WIC, school meals, Lifeline — with an estimated monthly amount", true], ["Food-dollar planner", "Two-week menu with a nurse's nutrition check", true], ["Internet-bill clinic", "Lifeline, ISP low-income plans, downgrade script", true], ["Local food map", "Pantries, EBT match, community fridges with verified hours", false], ["Price-shift alerts", "Staples that moved most this month in your ZIP", false], ["Essentials exchange", "Diaper banks, buy-nothing groups, tool libraries", false]],
+    food: { who: "Households whose food or internet bill is the first thing to break each month; SNAP/WIC-eligible families not enrolled; anyone whose SNAP was cut.", job: "Treat food security as a priority: understand the shortfall, plan a food budget that survives the month, connect to the local food system.",
+      tools: [["Benefits screener", "SNAP, WIC, school meals, Lifeline — with an estimated monthly amount", true], ["Food-dollar planner", "Two-week menu with a basic nutrition check", true], ["Internet-bill clinic", "Lifeline, ISP low-income plans, downgrade script", true], ["Local food map", "Pantries, EBT match, community fridges with verified hours", false], ["Price-shift alerts", "Staples that moved most this month in your ZIP", false], ["Essentials exchange", "Diaper banks, buy-nothing groups, tool libraries", false]],
       links: ["foodbank", "snapState", "wic", "lifeline", "l211"] },
     health: { who: "Anyone facing a coverage lapse, a medical bill they can't pay, a prescription they're rationing, or a denied prior authorization.", job: "Stop the two things that bankrupt families — losing coverage and paying list price — and teach you to read your own bills.",
-      tools: [["Coverage triage", "Medicaid renewal, Marketplace subsidy estimate, enrollment windows", true], ["Prescription cost cutter", "Cash price, generic, 90-day, assistance programs", true], ["Bill reader + charity care", "Financial-assistance request letter", true], ["Prior-auth appeal builder", "Appeal letter structured the way a nurse would", true], ["Care-access map", "Community health centers and sliding-scale clinics", true], ["Upload a bill to decode it", "Line-by-line explanation and No Surprises Act check", false]],
+      tools: [["Coverage triage", "Medicaid renewal, Marketplace subsidy estimate, enrollment windows", true], ["Prescription cost cutter", "Cash price, generic, 90-day, assistance programs", true], ["Bill reader + charity care", "Financial-assistance request letter", true], ["Prior-auth appeal builder", "Appeal letter built around your plan's own criteria", true], ["Care-access map", "Community health centers and sliding-scale clinics", true], ["Upload a bill to decode it", "Line-by-line explanation and No Surprises Act check", false]],
       guard: "Navigation, not medical advice. No diagnosis, no dosing. If anyone has chest pain, trouble breathing, stroke signs, or thoughts of self-harm: call 911 or 988 now.",
       links: ["healthcare", "medicaid", "hrsa", "needymeds", "cfpbMed"] },
     housing: { who: "Renters facing an increase or eviction notice, households paying over 40% of income on housing, and would-be owners who need a guide.", job: "Stabilize first (keep you housed), then reduce cost, then build toward ownership. Tenant power is collective.",
@@ -347,7 +347,7 @@
     energy: { who: "Households with a bill they can't cover, a shutoff notice, or a bill that jumped without explanation — including renters.", job: "A shutoff is a health event. Prevent it, then lower the bill, then organize ratepayers.",
       tools: [["Shutoff shield", "Medical certificate + payment-plan script", true], ["Assistance stack", "Discount rate → LIHEAP → weatherization, in the right order", true], ["Bill decoder", "Five things to check on your bill", true], ["DIY energy check", "Cheapest fixes first", true], ["Ratepayer organizer", "Public-comment template for rate cases", true], ["Rebate & credit finder", "Heat pumps, insulation, community solar", false]],
       links: ["liheap", "wap", "l211"] },
-    family: { who: "Working parents priced out of child care, the sandwich generation, anyone who needs leave, and seniors facing care costs.", job: "Caregiving is nursing work done unpaid at home. Find and fund care, protect your job and health, and connect you with other caregivers.",
+    family: { who: "Working parents priced out of child care, the sandwich generation, anyone who needs leave, and seniors facing care costs.", job: "Caregiving is skilled work, done unpaid at home. Find and fund care, protect your job and health, and connect you with other caregivers.",
       tools: [["Child care subsidy stacker", "State subsidy, Head Start, DCAP", true], ["Leave navigator", "FMLA + state paid leave + request letter", true], ["Paid family caregiver finder", "IHSS and consumer-directed programs", true], ["Caregiver check-in", "Respite and support", true], ["Elder care cost map", "In-home vs. adult day vs. assisted living, with Medicaid waivers", false], ["Care co-op builder", "Shared nannies and babysitting swaps", false]],
       links: ["childcare", "headstart", "eldercare", "respite", "fmla"] }
   };
@@ -359,7 +359,7 @@
     view.innerHTML = '<div class="layout"><div>' +
       '<div class="pillar-hero" style="--accent:' + P.accent + '"><p class="eyebrow dark">Pillar ' + P.roman + " · " + P.name + "</p><h2>" + P.app + "</h2>" +
       (d ? '<p><span class="chip ' + STATUS[d.status][0] + '">' + STATUS[d.status][1] + "</span> " + esc(d.words) + "</p>" : "") +
-      '<p class="small"><strong>Who it\'s for:</strong> ' + I.who + "</p><p class=\"small\"><strong>Your nurse-organizer's job here:</strong> " + I.job + "</p>" +
+      '<p class="small"><strong>Who it\'s for:</strong> ' + I.who + "</p><p class=\"small\"><strong>Your community organizer's job here:</strong> " + I.job + "</p>" +
       (I.guard ? '<div class="escalate"><strong>Guardrail:</strong> ' + I.guard + "</div>" : "") + "</div>" +
       (state.profile ? "<h3>Your steps</h3>" + (ts.length ? '<ol class="task-list">' + ts.map(taskHtml).join("") + "</ol>" : '<div class="empty">Nothing urgent here based on your answers. <button class="btn-link" type="button" id="editBtn2">Update answers</button></div>') :
         '<div class="empty"><p>Answer a few questions to see your steps.</p><button class="btn btn-teal" type="button" data-tab="home">Start my plan</button></div>') +

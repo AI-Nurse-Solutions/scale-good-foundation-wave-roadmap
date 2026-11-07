@@ -1,6 +1,6 @@
 # Life Within Reach
 
-A Nurse AI OS web app: an AI nurse-organizer that helps a household lower its costs across the five pillars of the Affordability App Map. Those are groceries (PantryPlan), health care (CareBridge), housing (HomeHold), energy (WattWise) and family care (KinCare). It also includes the Household Command Center and a Policy Watch preview.
+A Nurse AI OS web app: an AI community organizer that helps a household lower its costs across the five pillars of the Affordability App Map. Those are groceries (PantryPlan), health care (CareBridge), housing (HomeHold), energy (WattWise) and family care (KinCare). It also includes the Household Command Center and a Policy Watch preview.
 
 Target URL: **https://nurse-ai-os.org/life-within-reach/**
 
@@ -11,7 +11,7 @@ Target URL: **https://nurse-ai-os.org/life-within-reach/**
 | `index.html` | Public landing page |
 | `app/index.html` | The app (Household Command Center plus the five pillar tabs and Policy Watch) |
 | `assets/rules.js` | Versioned benefits rules engine. Every threshold has an effective date and a source |
-| `assets/app.js` | ADPIE flow: intake (Assess), diagnosis, ranked 30/60/90 plan, "Do it with me" drafts, weekly check-in and story bank |
+| `assets/app.js` | Five-step loop (Assess → Understand → Plan → Act → Check in): intake, situation summary, ranked 30/60/90 plan, "Do it with me" drafts, weekly check-in and story bank |
 | `assets/lwr.css` | Styles, using the shared Nurse AI OS palette and type (Fraunces, Source Sans 3) |
 | `assets/favicon-lamp.svg` | Nurse AI OS lamp mark |
 
@@ -29,6 +29,7 @@ Until then, it is previewable from this repo's GitHub Pages site at `/life-withi
 
 ## Privacy and guardrails (as built)
 
+- The AI is presented as a community organizer and says plainly that it is an AI tool, not a nurse, doctor, lawyer, or other licensed professional. Keep it that way: don't describe the AI persona as a nurse or with nursing credentials anywhere in the app or landing page.
 - Answers are stored only in the browser's `localStorage`. The user can export them as JSON or erase them in one click. Nothing is sent to a server.
 - The app never asks about immigration status, a Social Security number, symptoms or diagnoses.
 - Eligibility comes from `rules.js`, not from generated text. Every result is labeled as a screening estimate, with its rule source and effective date shown.
