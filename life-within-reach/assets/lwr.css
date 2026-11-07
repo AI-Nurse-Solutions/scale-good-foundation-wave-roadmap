@@ -360,3 +360,6 @@ dialog::backdrop { background: rgba(14,31,51,.55); }
   .site-header, .app-tabs, .sidebar, .safety-strip, .task-actions, .site-footer { display: none !important; }
   .layout { grid-template-columns: 1fr; }
 }
+
+/* Persona avatar shows a neutral emoji (the AI is not presented as a nurse) */
+.persona-avatar { font-size: 1.5rem; line-height: 1; }
